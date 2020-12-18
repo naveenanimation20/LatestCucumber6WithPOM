@@ -7,7 +7,7 @@ public class LoginPage {
 
 	private WebDriver driver;
 
-	// 1. By Locators: OR 
+	// 1. By Locators: OR
 	private By emailId = By.id("email");
 	private By password = By.id("passwd");
 	private By signInButton = By.id("SubmitLogin");
@@ -38,6 +38,14 @@ public class LoginPage {
 
 	public void clickOnLogin() {
 		driver.findElement(signInButton).click();
+	}
+
+	public AccountsPage doLogin(String un, String pwd) {
+		System.out.println("login with: " + un + " and " + pwd);
+		driver.findElement(emailId).sendKeys(un);
+		driver.findElement(password).sendKeys(pwd);
+		driver.findElement(signInButton).click();
+		return new AccountsPage(driver);
 	}
 
 }
