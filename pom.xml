@@ -81,7 +81,19 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.2</version>
+		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.2</version>
+		</dependency>
 
 
 
@@ -110,49 +122,22 @@
 						<include>**/ParallelRun.java</include>
 					</includes>
 					<parallel>methods</parallel>
-					<useUnlimitedThreads>true</useUnlimitedThreads>
+					<threadCount>4</threadCount>
+					<useUnlimitedThreads>false</useUnlimitedThreads>
 				</configuration>
 			</plugin>
 
-			<!-- <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>3.0.0-M3</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>integration-test</goal>
-						</goals>
-						<configuration>
-
-							UNCOMMENT - To add any exclusions if required
-							<excludes> <exclude>**/*IT*.java</exclude> </excludes>
-
-							<includes>
-
-								UNCOMMENT BELOW LINE - To execute feature files with a single 
-									runner
-								<include>**/MyTestRunner.java</include>
-
-								UNCOMMENT BELOW LINE - To execute feature files with multiple 
-									runners
-								<include>**/*Runner.java</include>
-							</includes>
-
-							UNCOMMENT BELOW 3 LINES - To execute using parallel or combination 
-								option
-							<parallel>methods</parallel>
-							<threadCount>4</threadCount>
-							<perCoreThreadCount>true</perCoreThreadCount>
-
-							UNCOMMENT BELOW 3 LINES - To execute using forking or combination 
-								option
-							<forkCount>2</forkCount> <reuseForks>true</reuseForks> <reportsDirectory>${project.build.directory}/failsafe-reports_${surefire.forkNumber}</reportsDirectory>
-
-						</configuration>
-					</execution>
-				</executions>
-			</plugin> -->
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-failsafe-plugin</artifactId> 
+				<version>3.0.0-M3</version> <executions> <execution> <goals> <goal>integration-test</goal> 
+				</goals> <configuration> UNCOMMENT - To add any exclusions if required <excludes> 
+				<exclude>**/*IT*.java</exclude> </excludes> <includes> UNCOMMENT BELOW LINE 
+				- To execute feature files with a single runner <include>**/MyTestRunner.java</include> 
+				UNCOMMENT BELOW LINE - To execute feature files with multiple runners <include>**/*Runner.java</include> 
+				</includes> UNCOMMENT BELOW 3 LINES - To execute using parallel or combination 
+				option <parallel>methods</parallel> <threadCount>4</threadCount> <perCoreThreadCount>true</perCoreThreadCount> 
+				UNCOMMENT BELOW 3 LINES - To execute using forking or combination option 
+				<forkCount>2</forkCount> <reuseForks>true</reuseForks> <reportsDirectory>${project.build.directory}/failsafe-reports_${surefire.forkNumber}</reportsDirectory> 
+				</configuration> </execution> </executions> </plugin> -->
 
 
 		</plugins>

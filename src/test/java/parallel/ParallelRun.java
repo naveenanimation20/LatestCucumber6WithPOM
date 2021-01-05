@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"timeline:test-output-thread/"
 				}, 
-		monochrome = true, 
+		monochrome = true,
 		glue = { "parallel" },
 		features = { "src/test/resources/parallel" }
 )
