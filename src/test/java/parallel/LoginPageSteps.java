@@ -26,6 +26,7 @@ public class LoginPageSteps {
 		title = loginPage.getLoginPageTitle();
 		//added
 		//added to durga branch
+		//jakeer added
 		System.out.println("Page title is: " + title);
 	}
 
