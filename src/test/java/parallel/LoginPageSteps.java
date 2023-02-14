@@ -25,6 +25,7 @@ public class LoginPageSteps {
 	public void user_gets_the_title_of_the_page() {
 		title = loginPage.getLoginPageTitle();
 		//added
+		//added to durga branch
 		System.out.println("Page title is: " + title);
 	}
 
